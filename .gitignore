@@ -1,0 +1,9 @@
+.netrwhist
+viminfo*
+undo/
+undo/*
+view/
+view/*
+sessions/*
+bundle/*
+*.tmp
