@@ -155,6 +155,7 @@ au BufNewFile,BufRead {*.vimrc,*.vim}                                           
 autocmd BufNewFile,BufRead *.scss                                               set ft=scss.css
 au BufNewFile,BufRead *.iphone.erb set filetype=html
 
+let g:github_user = "javierarce"
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1  = "inc"
@@ -169,8 +170,6 @@ map <leader><leader> :ZoomWin<CR>
 imap jj <ESC>
 imap Jj <ESC>
 imap JJ <ESC>
-
-map fg <C-z>
 
 " ,a to Ack
 nn <leader>a :Ack 
