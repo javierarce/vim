@@ -100,42 +100,42 @@ set omnifunc=csscomplete#CompleteCSS
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Vundle bundles
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle "mattn/emmet-vim"
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'msanders/snipmate.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-markdown'
-Bundle 'wavded/vim-stylus'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'vim-scripts/Rainbow-Parenthsis-Bundle'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'mmozuras/vim-github-comment'
-Bundle "pangloss/vim-javascript"
-Bundle "utl.vim"
-Bundle "digitaltoad/vim-jade"
-Bundle 'groenewege/vim-less'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'othree/html5.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'firegoby/SASS-Snippets'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin "mattn/emmet-vim"
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'msanders/snipmate.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-markdown'
+Plugin 'wavded/vim-stylus'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'vim-scripts/Rainbow-Parenthsis-Plugin'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mmozuras/vim-github-comment'
+Plugin "pangloss/vim-javascript"
+Plugin "utl.vim"
+Plugin "digitaltoad/vim-jade"
+Plugin 'groenewege/vim-less'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'othree/html5.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'firegoby/SASS-Snippets'
 
 """""""""""""""""""""""""""""" Plugins config
 so ~/.vim/config/colors.vimrc
@@ -143,7 +143,8 @@ so ~/.vim/config/ctrlp.vimrc
 so ~/.vim/config/vundle.vimrc
 so ~/.vim/config/syntastic.vimrc
 
-filetype plugin indent on
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Buffers events
 """""""""""""""""

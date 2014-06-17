@@ -1,2 +1,2 @@
-map <leader>bi :BundleInstall<CR>
-map <leader>biu :BundleInstall!<CR>
+map <leader>bi :PluginInstall<CR>
+map <leader>biu :PluginInstall!<CR>
