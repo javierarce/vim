@@ -98,53 +98,55 @@ set foldnestmax=2                          " Sets max folding level
 """"""""""""""""""""""""""""""""""""""""""""
 set omnifunc=csscomplete#CompleteCSS
 
-filetype off
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " Vundle bundles
+"Plugin "utl.vim"
+"Plugin 'firegoby/SASS-Snippets'
+"Plugin 'mmozuras/vim-github-comment'
+"Plugin 'tpope/vim-markdown'
+Plugin 'Raimondi/delimitMate'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'groenewege/vim-less'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-surround'
-Plugin "mattn/emmet-vim"
-Plugin 'vim-scripts/ZoomWin'
-Plugin 'msanders/snipmate.vim'
-Plugin 'sjl/gundo.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'msanders/snipmate.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-markdown'
-Plugin 'wavded/vim-stylus'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-scripts/Rainbow-Parenthsis-Plugin'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'mmozuras/vim-github-comment'
-Plugin "pangloss/vim-javascript"
-Plugin "utl.vim"
-Plugin "digitaltoad/vim-jade"
-Plugin 'groenewege/vim-less'
+"Plugin 'kien/Rainbow-Parenthsis-Plugin'
+Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'othree/html5.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'firegoby/SASS-Snippets'
+Plugin 'wavded/vim-stylus'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 """""""""""""""""""""""""""""" Plugins config
 so ~/.vim/config/colors.vimrc
 so ~/.vim/config/ctrlp.vimrc
 so ~/.vim/config/vundle.vimrc
 so ~/.vim/config/syntastic.vimrc
-
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 " Buffers events
 """""""""""""""""
@@ -164,6 +166,9 @@ let javaScript_fold       = 1       " JavaScript
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" NERDTreeToggle configuration
+map <leader> :NERDTreeToggle<CR>
+
 " ZoomWin configuration
 map <leader><leader> :ZoomWin<CR>
 
@@ -177,7 +182,6 @@ nn <leader>a :Ack
 
 " Rotating among results in an ack search
 map an :cn<CR>
-"map ap :cp<CR>
 
 " Disable the regular keys to get me on the right track
 nn <up> <nop>
@@ -194,10 +198,6 @@ nn <leader>v <C-w>v<C-w>l
 nn <leader>h <C-w>s<C-w>l
 
 " Move between splits
-"nn <C-h> <C-w>h
-"nn <C-j> <C-w>j
-"nn <C-k> <C-w>k
-"nn <C-l> <C-w>l
 nnoremap <C-J> <C-W>w
 nnoremap <C-K> <C-W>W
 
