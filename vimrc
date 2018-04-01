@@ -78,7 +78,7 @@ set wildignore+=*/.sass-cache/*            " Ignored files paths
 set wildignore+=*/.jhw-cache/*             " Ignored files paths
 set wildignore+=*/node_modules/*           " Ignored files paths
 set wildignore+=*/vendor/*                 " Ignored files paths
-set wildignore+=*/resources/*              " Ignored files paths
+"set wildignore+=*/resources/*              " Ignored files paths
 set wildignore+=*/build/*                  " Ignored files paths
 set wildignore+=*/_site/*                  " Ignored files paths
 """"""""""""""""""""""""""""""""""""""""""""
@@ -108,15 +108,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Vundle bundles
 "Plugin "utl.vim"
-"Plugin 'firegoby/SASS-Snippets'
+Plugin 'firegoby/SASS-Snippets'
 "Plugin 'mmozuras/vim-github-comment'
-"Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'digitaltoad/vim-jade'
+Plugin 'dracula/vim'
+Plugin 'digitaltoad/vim-pug'
 Plugin 'groenewege/vim-less'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
@@ -124,7 +124,12 @@ Plugin 'mileszs/ack.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'othree/html5.vim'
+Plugin 'danro/rename.vim'
+"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -134,10 +139,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-"Plugin 'kien/Rainbow-Parenthsis-Plugin'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'wavded/vim-stylus'
+Plugin 'posva/vim-vue'
+Plugin 'sekel/vim-vue-syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -147,6 +154,7 @@ so ~/.vim/config/colors.vimrc
 so ~/.vim/config/ctrlp.vimrc
 so ~/.vim/config/vundle.vimrc
 so ~/.vim/config/syntastic.vimrc
+so ~/.vim/config/rainbow.vimrc
 
 " Buffers events
 """""""""""""""""
@@ -163,6 +171,8 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1  = "inc"
 let javaScript_fold       = 1       " JavaScript
+
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
