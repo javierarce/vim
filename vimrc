@@ -1,6 +1,10 @@
 " Changes leader key*/
 let mapleader = ","
 
+if has('python3')
+  silent! python3 1
+endif
+
 " Reloads vimrc file after saving it
 augroup AutoReloadVimRC
   au!
@@ -107,44 +111,42 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Vundle bundles
-"Plugin "utl.vim"
-Plugin 'firegoby/SASS-Snippets'
-"Plugin 'mmozuras/vim-github-comment'
-Plugin 'tpope/vim-markdown'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'posva/vim-vue'
 Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'dracula/vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'danro/rename.vim'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'dracula/vim'
 Plugin 'groenewege/vim-less'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'kien/ctrlp.vim'
+Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'msanders/snipmate.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'othree/html5.vim'
-Plugin 'danro/rename.vim'
-"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'peitalin/vim-jsx-typescript'
-Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'wavded/vim-stylus'
-Plugin 'posva/vim-vue'
-Plugin 'sekel/vim-vue-syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -155,6 +157,7 @@ so ~/.vim/config/ctrlp.vimrc
 so ~/.vim/config/vundle.vimrc
 so ~/.vim/config/syntastic.vimrc
 so ~/.vim/config/rainbow.vimrc
+so ~/.vim/config/snippets.vimrc
 
 " Buffers events
 """""""""""""""""
