@@ -30,7 +30,7 @@ set tabstop=2                              " Whitespace stuff
 set shiftwidth=2                           " Whitespace stuff
 set softtabstop=2                          " Whitespace stuff
 set expandtab                              " Whitespace stuff
-set list listchars=tab:\ \ ,trail:·        " Whitespace stuff
+set list listchars=tab:\ \ ,space:·,trail:·        " Whitespace stuff
 """"""""""""""""""""""""""""""""""""""""""""
 set hlsearch                               " Search stuff
 set incsearch                              " Search stuff
@@ -178,6 +178,9 @@ let javaScript_fold       = 1       " JavaScript
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Toggle invisibles
+nmap <leader>l :set list!<CR>
 
 " NERDTreeToggle configuration
 map <leader> :NERDTreeToggle<CR>
